@@ -1,6 +1,7 @@
 package com.zym.memorymasterserver.bean;
 
 import org.nutz.dao.entity.annotation.Column;
+import org.nutz.dao.entity.annotation.Default;
 import org.nutz.dao.entity.annotation.Id;
 import org.nutz.dao.entity.annotation.Table;
 
@@ -15,6 +16,7 @@ public class Users {
     @Column("user_phone")
     private String userPhone;
     @Column("user_photo")
+    @Default("img/sys_photo.jpg")
     private String userPhoto;
     @Column("user_nickname")
     private String userNickName;
@@ -23,7 +25,9 @@ public class Users {
     @Column("secret_key")
     private String secretKey;
     @Column("user_curr_book_id")
+    @Default("-1")
     private Integer userCurrentBookId;
+    @Default("0")
     @Column("user_completed_days")
     private Integer userCompletedDays;
 

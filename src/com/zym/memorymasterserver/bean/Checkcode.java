@@ -8,7 +8,7 @@ import org.nutz.ioc.loader.annotation.IocBean;
 /**
  * Created by 23381 on 2018/8/17.
  */
-@Table("xrr_check_code")
+@Table("mm_check_code")
 public class Checkcode {
     @Id
     private Integer checkCodeId;
