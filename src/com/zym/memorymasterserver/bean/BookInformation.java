@@ -11,7 +11,7 @@ import org.nutz.dao.entity.annotation.Table;
 @Table("mm_book_information")
 public class BookInformation {
     @Id
-    private Integer bookInfromationId;
+    private Integer bookInformationId;
     @Column("book_name")
     private String bookName;
     @Column("book_type")
@@ -30,16 +30,16 @@ public class BookInformation {
     @Default("0")
     private Integer bookLoadingNum;
     @Column("book_chapter_num")
-    private String bookChapterNum;
+    private Integer bookChapterNum;
     @Column("book_description")
     private String bookDescription;
 
     public Integer getBookInfromationId() {
-        return bookInfromationId;
+        return bookInformationId;
     }
 
     public void setBookInfromationId(Integer bookInfromationId) {
-        this.bookInfromationId = bookInfromationId;
+        this.bookInformationId = bookInfromationId;
     }
 
     public String getBookName() {
@@ -106,11 +106,11 @@ public class BookInformation {
         this.bookLoadingNum = bookLoadingNum;
     }
 
-    public String getBookChapterNum() {
+    public Integer getBookChapterNum() {
         return bookChapterNum;
     }
 
-    public void setBookChapterNum(String bookChapterNum) {
+    public void setBookChapterNum(Integer bookChapterNum) {
         this.bookChapterNum = bookChapterNum;
     }
 
