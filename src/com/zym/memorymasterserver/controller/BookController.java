@@ -27,7 +27,7 @@ import java.util.Vector;
  * Created by 12390 on 2019/3/2.
  */
 @IocBean
-public class BookInformationController {
+public class BookController {
     @Inject
     Dao dao;
 
@@ -86,13 +86,10 @@ public class BookInformationController {
                         Cnd.where("bookInformationId","=",Integer.valueOf(bookId)));
                 Sql sql = Sqls.create("select * from $table;");
                 sql.vars().set("table", b.getBookPath());
-
-
                 sql.setCallback(new SqlCallback() {
                     @Override
                     public Object invoke(Connection connection, ResultSet resultSet, Sql sql) throws SQLException {
                         List<BookContent> list = new Vector<>();
-
                         while(resultSet.next()){
                             BookContent bookContent = new BookContent();
                             bookContent.setBookContentId(resultSet.getInt("book_content_id"));

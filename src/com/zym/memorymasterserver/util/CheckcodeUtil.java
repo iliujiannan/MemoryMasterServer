@@ -1,6 +1,6 @@
 package com.zym.memorymasterserver.util;
 
-public class GetCheckCode {
+public class CheckcodeUtil {
     //获取随机串验证码
     public String getCheckCode(int len) {
         String src="123456789";
